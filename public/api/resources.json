@@ -1,0 +1,22 @@
+{
+	"disks":[
+		{
+			"filesystem": "/dev/vda1",
+			"used":33505,
+			"available": 436789
+		},
+		{
+			"filesystem": "/dev/vdb",
+			"used":188160,
+			"available": 78187440
+		}
+	],
+	"memory":{
+		"used":311800,
+		"free":708616
+	},
+	"swap":{
+		"used":123456,
+		"free":2064376
+	}
+}

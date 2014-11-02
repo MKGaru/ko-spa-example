@@ -1,0 +1,33 @@
+directory-tree{
+	display:block;
+	directory-tree {
+		margin-left: -2em;
+	}
+	ul.fa-ul{
+		margin-left:2em;
+		li{
+			span.name{
+				display:inline-block;
+				color:darkgreen;
+				margin-right:1em;
+				user-select:none;
+				-webkit-user-select:none;
+				&:hover{
+					text-decoration: underline;
+				}
+			}
+			span.description{
+				color: #aaa;
+			}
+
+			.fa-folder,
+			.fa-folder-open-o{
+				color: darkorange;
+				&~span.name{
+					color: blue;
+					cursor:pointer;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,12 @@
+<ul data-bind="css:{off:!isShown}">
+{{#foreach menu}}
+	<li data-bind="css:{active:$root.href==href}">
+		{{#if: $parent.isShown}}
+		<a href="{{href}}"><i class="fa fa-fw fa-{{icon}}"></i>{{label}}</a>
+		{{/if}}
+		{{#else}}
+		<a href="{{href}}" class="right-tip" data-tips="{{label}}"><i class="fa fa-fw fa-{{icon}}"></i></a>
+		{{/else}}
+	</li>
+{{/foreach}}
+</ul>

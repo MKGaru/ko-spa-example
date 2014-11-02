@@ -1,0 +1,21 @@
+<ul class="fa-ul">
+	<li>
+		<i class="fa-li fa fa-folder{{isOpened?'-open-o':''}}"></i>
+		<span class="name" data-bind="on.click: isOpened=!isOpened">{{name}}</span>
+		<span class="description">[{{description}}]</span>
+	</li>
+	<li data-bind="visible:isOpened">
+		<ul class="fa-ul" data-bind="foreach:sub">
+			<li>
+				{{#if: $data.sub}}
+				<directory-tree params="option:$data"></directory-tree>
+				{{/if}}
+				{{#else}}
+				<i class="fa-li fa fa-file-o"></i>
+				<span class="name">{{name}}</span>
+				<span class="description">[{{description}}]</span>
+				{{/else}}
+			</li>
+		</ul>
+	</li>
+</ul>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title data-bind="text:(pages[page].title)+' | Dashboard'">Dashboard</title>
+	<!-- Lib/CSS -->
+	<link rel="stylesheet" href="lib/fontawesome/css/font-awesome.css"/>
+	<link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css"/>
+	<link rel="stylesheet" href="lib/css3tips/css3-tips.css"/>
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/style.css"/>
+
+	<!-- JS/Lib -->
+	<script src="lib/jquery/dist/jquery.js"></script>
+	<script src="lib/knockout/dist/knockout.debug.js"></script>
+	<script src="lib/knockout.punches/knockout.punches.js"></script>
+	<script src="lib/knockout-es5/dist/knockout-es5.js"></script>
+	<script src="lib/knockout-else/dist/knockout-else.js"></script>
+	<script src="lib/router.js/dist/router.min.js"></script>
+	<!-- JS -->
+	<script src="js/bundle.js"></script>
+</head>
+<body>
+	<header-nav params="option:headerNav"></header-nav>
+	<side-nav params="option:sideNav"></side-nav>
+	<div class="contents {{contents()}} {{sideNav.isShown?'':'wide'}}" data-bind="component:{name:contents(),params:pages[page]}">
+
+	</div>
+</body>
+</html>

@@ -1,0 +1,13 @@
+/.idea
+/node_modules
+/src/node_modules
+/src/typings
+/public/lib/jquery
+/public/lib/knockout
+/public/lib/knockout.punches
+/public/lib/knockout-else
+/public/lib/knockout-es5
+/public/lib/router.js
+/public/lib/bootstrap
+/public/lib/fontawesome
+/public/js/bundle.js
