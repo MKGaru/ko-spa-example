@@ -6,7 +6,7 @@ ko-spa-example
 	<dt>knockout.js (ver 3.2 with component)  </dt>
 	<dd>with  knockout.punches</dd>
 	<dd>with  kunockout.es5</dd>
-	<dd>with  more</dd>
+	<dd>and   more</dd>
 </dl>
 
 Demo
