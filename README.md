@@ -1,6 +1,10 @@
 ko-spa-example
 ==============
 
+Typescript( knockout + punches + es5 ) and LESS and WebPack
+------------
+
+
 [WebPack]  
 <dl>
 	<dt>knockout.js (ver 3.2 with component)  </dt>
