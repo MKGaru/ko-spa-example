@@ -7,6 +7,7 @@ body{
 }
 body{
 	padding-top:30px;
+	overflow:hidden;
 }
 body>header-nav{
 	margin-top:-30px;
@@ -15,8 +16,6 @@ body>header-nav{
 body>side-nav{
 	float:left;
 	height: 100%;
-	overflow-x:hidden;
-	overflow-y:auto;
 }
 body>.contents{
 	margin-left:15em;
