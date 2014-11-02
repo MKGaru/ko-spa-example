@@ -9,6 +9,9 @@ ko-spa-example
 	<dd>with  more</dd>
 </dl>
 
+Demo
+------
+http://mkgaru.github.io/ko_spa_example/
 
 Usage
 ------
