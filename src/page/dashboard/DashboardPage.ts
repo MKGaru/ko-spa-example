@@ -18,8 +18,8 @@ class DashboardPage implements IPage{
 
 	public load(id:string){
 		this.id = id;
-		var base = $("base").attr("href").slice(0,-1);
-		var endpoint = "{base}/api/dashboard/{id}.json".assign({base:base,id:id});
+		var base = $("base").attr("href");
+		var endpoint = "{base}api/dashboard/{id}.json".assign({base:base,id:id});
 		var dashboard = this;
 
 		return $.getJSON(endpoint)
@@ -56,8 +56,8 @@ class DashboardPage implements IPage{
 			row:widgetLayout.row
 		}));
 
-		var base = $("base").attr("href").slice(0,-1);
-		var endpoint = "{base}/api/dashboard/{id}.json".assign({base:base,id:this.id});
+		var base = $("base").attr("href");
+		var endpoint = "{base}api/dashboard/{id}.json".assign({base:base,id:this.id});
 
 		//GithubPageでのテストデモ用に、localstorageに退避するよ
 		localStorage.setItem(endpoint,JSON.stringify(serialized));

@@ -13,8 +13,8 @@ var DashboardPage = (function () {
     }
     DashboardPage.prototype.load = function (id) {
         this.id = id;
-        var base = $("base").attr("href").slice(0, -1);
-        var endpoint = "{base}/api/dashboard/{id}.json".assign({ base: base, id: id });
+        var base = $("base").attr("href");
+        var endpoint = "{base}api/dashboard/{id}.json".assign({ base: base, id: id });
         var dashboard = this;
         return $.getJSON(endpoint).done(function (data) {
             //DEMO GithubPageでのテストデモ用に、localstorageから復帰するよ。
@@ -47,8 +47,8 @@ var DashboardPage = (function () {
             col: widgetLayout.col,
             row: widgetLayout.row
         }); });
-        var base = $("base").attr("href").slice(0, -1);
-        var endpoint = "{base}/api/dashboard/{id}.json".assign({ base: base, id: this.id });
+        var base = $("base").attr("href");
+        var endpoint = "{base}api/dashboard/{id}.json".assign({ base: base, id: this.id });
         //GithubPageでのテストデモ用に、localstorageに退避するよ
         localStorage.setItem(endpoint, JSON.stringify(serialized));
         this.message = "Save success.";

@@ -35,11 +35,11 @@ class Application{
 		// Init Common Parts VM
 		this.sideNav =  new SideNav(
 			[
-				new MenuItem(pages.home,       '/'),
-				new MenuItem('1stDashboard','tachometer','/dashboard/1'),
-				new MenuItem('2ndDashboard','tachometer','/dashboard/2'),
-				new MenuItem(pages.apps,       '/app'),
-				new MenuItem('ErrorSample','warning','/hogehoge')
+				new MenuItem(pages.home,       ''),
+				new MenuItem('1stDashboard','tachometer','dashboard/1'),
+				new MenuItem('2ndDashboard','tachometer','dashboard/2'),
+				new MenuItem(pages.apps,       'app'),
+				new MenuItem('ErrorSample','warning','hogehoge')
 			]
 		);
 		this.headerNav  = new HeaderNav(
@@ -55,14 +55,14 @@ class ApplicationRouter{
 	constructor(
 		private app:Application
 	){
-		page.base($("base").attr("href").slice(0,-1));
+		page.base($("base").attr("href"));
 
 		page('*',(ctx,next)=>{
-			app.href = ctx.pathname;
+			app.href = ctx.pathname.substr(1);
 			next();
 		});
-		page('/',   (ctx,next)=>{app.page='home'});
-		page('/dashboard/:id', (ctx,next)=>{
+		page('',   (ctx,next)=>{app.page='home'});
+		page('dashboard/:id', (ctx,next)=>{
 			var dashboardPage = new DashboardPage();
 			dashboardPage.load(ctx.params.id)
 				.done(data=>{
@@ -73,7 +73,7 @@ class ApplicationRouter{
 					next();
 				});
 		});
-		page('/app',(ctx,next)=>{app.page='apps'});
+		page('app',(ctx,next)=>{app.page='apps'});
 		page('*',(ctx,next)=>{
 			var errorPage = (<ErrorPage>app.pages['error']);
 			errorPage.code = 404;
