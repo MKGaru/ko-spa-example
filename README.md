@@ -15,7 +15,8 @@ Typescript( knockout + punches + es5 ) and LESS and WebPack
 
 Demo
 ------
-http://mkgaru.github.io/ko_spa_example/6b7d9d9/
+Legacy: http://mkgaru.github.io/ko_spa_example/6b7d9d9/  
+Current: http://mkgaru.github.io/ko_spa_example/63d449f/  (Github's Demo can't page reload. maby 404)
 
 Usage
 ------
