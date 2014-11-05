@@ -1,25 +1,22 @@
 /// <reference path="../../references.d.ts" />
-var ErrorsPage = (function () {
-    function ErrorsPage() {
+var ErrorPage = (function () {
+    function ErrorPage() {
         this.title = "Error";
+        this.component = "error-page";
         this.icon = "warning";
         this.code = 500;
         this.message = '';
         ko.track(this);
     }
-    return ErrorsPage;
+    return ErrorPage;
 })();
-/*
- $("head").append(
- $("<style>").html(require('./ErrorPage.less'))
- );
- */
+//require('./ErrorPage.less');
 ko.components.register('error-page', {
     template: require('./ErrorPage.html'),
     viewModel: {
         createViewModel: function (params, componentInfo) {
-            return params instanceof ErrorsPage ? params : params.option;
+            return params instanceof ErrorPage ? params : params.option;
         }
     }
 });
-module.exports = ErrorsPage;
+module.exports = ErrorPage;

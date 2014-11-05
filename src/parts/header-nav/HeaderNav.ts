@@ -11,15 +11,12 @@ class HeaderNav{
 }
 export = HeaderNav;
 
-$("head").append(
-	$("<style>").html(require('./HeaderNav.less'))
-);
-
+require('./HeaderNav.less');
 ko.components.register('header-nav',{
 	template: require('./HeaderNav.html'),
 	viewModel:{
-		createViewModel: function(params, componentInfo){
-			return params instanceof HeaderNav ? params : params.option;
+		createViewModel(params, componentInfo){
+			return params instanceof HeaderNav ? params : ko.unwrap(params.option);
 		}
 	}
 });

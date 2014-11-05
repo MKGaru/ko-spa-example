@@ -1,0 +1,12 @@
+{
+	"title": "Second",
+	"widgets": [
+		{"type": "text","data": "1","size_x": 1,"size_y":1,"col":1,"row":1},
+		{"type": "text","data": "2","size_x": 1,"size_y":1,"col":2,"row":1},
+		{"type": "text","data": "3","size_x": 1,"size_y":2,"col":3,"row":1},
+		{"type": "text","data": "4","size_x": 1,"size_y":3,"col":4,"row":1},
+		{"type": "text","data": "5","size_x": 1,"size_y":1,"col":1,"row":2},
+		{"type": "text","data": "6","size_x": 1,"size_y":1,"col":2,"row":2},
+		{"type": "text","data": "7","size_x": 3,"size_y":1,"col":1,"row":3}
+	]
+}

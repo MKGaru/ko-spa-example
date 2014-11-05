@@ -1,7 +1,8 @@
 /// <reference path="../../references.d.ts" />
 
-class ErrorsPage implements IPage{
+class ErrorPage implements IPage{
 	public title ="Error";
+	public component ="error-page";
 	public icon = "warning";
 
 	public code:number=500;
@@ -12,19 +13,14 @@ class ErrorsPage implements IPage{
 		ko.track(this);
 	}
 }
-export = ErrorsPage;
+export = ErrorPage;
 
-/*
- $("head").append(
- $("<style>").html(require('./ErrorPage.less'))
- );
- */
-
+//require('./ErrorPage.less');
 ko.components.register('error-page',{
 	template: require('./ErrorPage.html'),
 	viewModel:{
 		createViewModel(params, componentInfo){
-			return params instanceof ErrorsPage ? params : params.option;
+			return params instanceof ErrorPage ? params : params.option;
 		}
 	}
 });

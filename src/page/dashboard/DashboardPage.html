@@ -1,0 +1,8 @@
+<h1>{{title}}</h1>
+<div class="control">
+	{{#if: message}}
+	<div class="alert alert-success" role="alert">{{message}}</div>
+	{{/if}}
+	<button type="button" class="btn btn-info" data-bind="click:save">Save</button>
+</div>
+<widget-holder params="option:widgetHolder"></widget-holder>

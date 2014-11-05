@@ -11,11 +11,14 @@
     "jquery/jquery.d.ts": {
       "commit": "bd9a1922e44ddf35953587a92c5caf4242bf6ea5"
     },
-    "node/node.d.ts": {
-      "commit": "7be40b2a8aca2288fe7011cd24959718756a5664"
-    },
     "knockout/knockout.d.ts": {
       "commit": "7be40b2a8aca2288fe7011cd24959718756a5664"
+    },
+    "jqueryui/jqueryui.d.ts": {
+      "commit": "0202fa011287e4f8394f01edc6681442dbdeaf51"
+    },
+    "node/node.d.ts": {
+      "commit": "5e8ac2341f100202415ff39d8f79875b439ac677"
     }
   }
 }

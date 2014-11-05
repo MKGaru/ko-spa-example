@@ -8,12 +8,12 @@ var DirectoryTree = (function () {
     }
     return DirectoryTree;
 })();
-$("head").append($("<style>").html(require('./DirectoryTree.less')));
+require('./DirectoryTree.less');
 ko.components.register('directory-tree', {
     template: require('./DirectoryTree.html'),
     viewModel: {
         createViewModel: function (params, componentInfo) {
-            return params instanceof DirectoryTree ? params : params.option;
+            return params instanceof DirectoryTree ? params : ko.unwrap(params.option);
         }
     }
 });

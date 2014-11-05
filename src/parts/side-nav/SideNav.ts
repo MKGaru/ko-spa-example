@@ -15,15 +15,12 @@ class SideNav{
 }
 export = SideNav;
 
-$("head").append(
-	$("<style>").html(require('./SideNav.less'))
-);
-
+require('./SideNav.less');
 ko.components.register('side-nav',{
 	template: require('./SideNav.html'),
 	viewModel:{
 		createViewModel(params, componentInfo){
-			return params instanceof SideNav ? params : params.option;
+			return params instanceof SideNav ? params : ko.unwrap(params.option);
 		}
 	}
 });
